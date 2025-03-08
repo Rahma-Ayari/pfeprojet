@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/clients")
@@ -31,7 +30,6 @@ public class ClientController {
         return clientService.getClientByNom(nom);
     }
 
-   
     @PutMapping("/validate")
     public Client validateClient(@RequestParam String email, @RequestParam String code) {
         return clientService.validateClient(email, code);
